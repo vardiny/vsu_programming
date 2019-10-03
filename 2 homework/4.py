@@ -1,24 +1,24 @@
 def bracket(f,l):
-    n = int (0)
-    s = int (0)
-    for x in range(0,l):
-        if f[x] == "(":
-            n = n+1
-        elif f[x] == ")":
-            s = s+1
-    k = str(s - n)
-    m = str(n - s)
-    if s > n:
+    open_b = 0
+    end_b = 0
+    for x in f:
+        if x == "(":
+            open_b = open_b + 1
+        elif x == ")":
+            end_b = end_b + 1
+    k = str(end_b - open_b)
+    m = str(open_b - end_b)
+    if end_b > open_b:
         if k == 1:
             return ("You miss the opening 1 bracket")
         else:
-            return ( "You miss the opening"+" "+k+" "+"brackets")
-    elif s < n:
+            return ( "You miss the opening" + " " + k + " " + "brackets")
+    elif end_b < open_b:
         if m == 1:
             return ("You miss the ending 1 bracket")
         else:
-            return ("You miss the ending"+" "+m+" "+"brackets")
-    elif s == n == 0:
+            return ("You miss the ending" + " " + m + " " + "brackets")
+    elif open_b == open_b == 0:
         return("You forgot to write something (((")
     else: 
             return ("Well done!!!")
@@ -27,8 +27,8 @@ lst = []
 while a: 
     lst.append(a)
     a = input()
-lft = ''.join(lst)
-l = len(lft)
+lst2 = ''.join(lst)
+l = len(lst2)
 m = str ()
-m = bracket(lft,l)
+m = bracket(lst2,l)
 print(m)
