@@ -1,5 +1,5 @@
 import random
-a = int(-1)
+a = -1 #AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 m = random.randint(0,100)
 while a != m:
     a = int(input("Enter the number: "))
