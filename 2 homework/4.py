@@ -1,9 +1,8 @@
 def bracket(f):
     open_b = 0
     end_b = 0
-    for x in f:
-        open_b = f.count("(")
-        end_b = f.count(")")
+    open_b = f.count("(")
+    end_b = f.count(")")
     k = str(end_b - open_b)
     m = str(open_b - end_b)
     if end_b > open_b:
