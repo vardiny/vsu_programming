@@ -1,11 +1,9 @@
-def bracket(f,l):
+def bracket(f):
     open_b = 0
     end_b = 0
     for x in f:
-        if x == "(":
-            open_b = open_b + 1
-        elif x == ")":
-            end_b = end_b + 1
+        open_b = f.count("(")
+        end_b = f.count(")")
     k = str(end_b - open_b)
     m = str(open_b - end_b)
     if end_b > open_b:
@@ -27,8 +25,6 @@ lst = []
 while a: 
     lst.append(a)
     a = input()
-lst2 = ''.join(lst)
-l = len(lst2)
 m = str ()
-m = bracket(lst2,l)
+m = bracket(lst)
 print(m)
