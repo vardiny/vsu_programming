@@ -1,13 +1,13 @@
 def time_of_year(n):
     if n < 3:
-        return("Winter")
+        return "Winter"
     elif n < 6:
-        return("Spring")
+        return "Spring"
     elif n < 9:
-        return("Summer")
+        return "Summer"
     elif n < 12:
-        return("Autumn")
+        return "Autumn"
     elif n == 12:
-        return("Winter")
+        return "Winter"
 n = int(input("Enter the number of month: "))
 print(time_of_year(n))

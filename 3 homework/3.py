@@ -2,7 +2,7 @@ def fibona44i(n):
     s = 0
     d = 1
     lst = [0]
-    for x in range(n):
+    for x in range(n-1):
         if s > d:
             d = d + s
             lst.append(s)
