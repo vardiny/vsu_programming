@@ -1,7 +1,10 @@
 def retorn(ch):
-    if (not ch % 2 or not ch % 3) and ch > 3:
-        return "False"
-    else:
+    d = 2
+    while not (ch % d == 0):
+        d += 1
+    if d == ch:
         return "True"
+    else:
+        return "False"
 a = int(input("Enter your number: "))
 print(retorn(a))

@@ -1,27 +1,31 @@
-lst = []
-l = str()
-lst = input().split()
-print(lst)
-for x in range(len(lst)):
-    if x == 0:
-        A = int(lst[x])
-    if x == 1:
-        l == ' '.join(lst[x])
-    if x == 2:
-        B = int (lst[x])
-print(A,B)
-for x in lst:
-    if x == "+":
-        print(A + B)
-    elif x == "*":
-        print(A * B)
-    elif x == "-":
-        print(A - B)
-    elif x == "%":
-        print(A % B)
-    elif x == "**":
-        print(A ** B)
-    elif x == "//":
-        print(A // B)
-    elif x == "/":
-        print(A / B)
+import string
+A = int()
+B = int()
+A_ = []
+B_ = []
+l = 0
+lst = input()
+for i in lst:
+    if i in string.punctuation:
+        x = i
+        l = 1
+    elif l == 0:
+        A_.append(i)
+    else:
+        B_.append(i)
+A = int(''.join(A_)) 
+B = int(''.join(B_)) 
+if x == "+":
+    print(A + B)
+elif x == "*":
+    print(A * B)
+elif x == "-":
+   print(A - B)
+elif x == "%":
+   print(A % B)
+elif x == "**":
+   print(A ** B)
+elif x == "//":
+   print(A // B)
+elif x == "/":
+   print(A / B)
