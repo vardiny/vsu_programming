@@ -1,8 +1,5 @@
 def hash(key):
-    result = 0
-    for i in key:
-        result += ord(i)
-    return result % 13
+    return len(key)
 storage = [0] * 13
 q = 1
 def deleted_f(index, key):
@@ -15,15 +12,15 @@ def deleted_f(index, key):
             break
         j += q
     storage[index] = storage[j]  
-def set_value(key):
+def get_value(key):
     index = hash(key)
     return storage[index]
-def get_value(key,value):
+def set_value(key,value):
     index = hash(key)
     if storage[index] != 0:
         deleted_f(index, key)
     else:
         storage[index] = value
-get_value("XYZ", 7)
-get_value("ABC", 42)
-print(set_value("XYZ"))
+set_value("XYZ", 7)
+set_value("ABC", 42)
+print(get_value("XYZ"))
