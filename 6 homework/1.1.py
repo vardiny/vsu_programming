@@ -1,5 +1,8 @@
 def hash(key):
-    return len(key)
+    result = 0
+    for i in key:
+        result += ord(i)
+    return result % 13
 storage = [0] * 13
 q = 1
 def deleted_f(index, key):
