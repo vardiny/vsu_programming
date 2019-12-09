@@ -1,5 +1,5 @@
 size = 6
-storage = [ [] for _ in range(size)]
+storage = [[] for _ in range(size)]
  
 def hash(key):
     result = 0
