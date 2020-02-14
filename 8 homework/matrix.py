@@ -23,9 +23,9 @@ class Matrix:
         print('Matrix:') 
         for x in self.matrix:
             x = ' '.join(str(e) for e in x)
-            print(x)
+            print(x) 
 
 matrix = Matrix()
 matrix.key_entry()
 #matrix.add()
-matrix.__str__()
+print(matrix)
